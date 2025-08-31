@@ -1,4 +1,3 @@
-```markdown
 # AI Code Commenter - azario0
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -111,6 +110,3 @@ Contributions are welcome! If you have any suggestions, bug reports, or feature 
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 
 
-## Contact
-
-*   Your GitHub username:  [azario0](https://github.com/azario0)  (Replace with your actual GitHub profile link)
