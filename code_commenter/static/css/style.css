@@ -1,0 +1,186 @@
+/* static/css/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap');
+
+:root {
+    --bg-color: #1a1a2e;
+    --card-bg: #16213e;
+    --text-color: #e0e0e0;
+    --primary-color: #0f3460;
+    --accent-color: #e94560;
+    --border-color: #2a3b5c;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+main {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+textarea, input[type="file"] {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-color);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.95rem;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px var(--accent-color);
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #ff5777;
+}
+
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+.results {
+    margin-top: 3rem;
+}
+
+.results h2 {
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.code-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.code-box {
+    background-color: #282a36; /* Okaidia theme background */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.code-box h3 {
+    background-color: var(--primary-color);
+    padding: 0.8rem 1.2rem;
+    margin: 0;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.download-btn {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: background-color 0.2s ease;
+}
+
+.download-btn:hover {
+    background-color: #ff5777;
+}
+
+pre[class*="language-"] {
+    margin: 0 !important;
+    max-height: 60vh;
+    overflow: auto;
+}
+
+.error-box {
+    background-color: #ff4d4d20;
+    border: 1px solid #ff4d4d;
+    color: #ffcccc;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    color: #888;
+}
+
+/* Loader animation */
+.loader {
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid var(--accent-color);
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 800px) {
+    .code-comparison {
+        grid-template-columns: 1fr;
+    }
+}
